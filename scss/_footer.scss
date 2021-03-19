@@ -1,0 +1,33 @@
+
+/* Footer Section */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 15px;
+    font-family: $font-footer;
+  }
+  
+  .github-link {
+    background-color: white;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 0 0 20px $shadow-lighter;
+    font-weight: 500;
+    color: blue;
+    transition: transform 0.5s;
+  }
+  
+  .github-link:hover {
+    color: darkblue;
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px $shadow-light;
+    text-decoration: none;
+  }
+  
+  .dev {
+    font-weight: weight(bold);
+  }

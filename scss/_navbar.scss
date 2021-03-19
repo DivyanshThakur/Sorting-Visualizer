@@ -1,0 +1,19 @@
+.navbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100vw;
+}
+  
+.logo {
+    margin: 0 10px;
+}
+  
+.heading {
+    font-family: $font-heading;
+}
+  
+.heading:hover {
+    text-decoration: none;
+}
+  

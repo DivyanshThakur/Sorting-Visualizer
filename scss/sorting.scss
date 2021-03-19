@@ -1,0 +1,32 @@
+
+@import "variables";
+@import "functions";
+
+body {
+  font-family: $font-body;
+}
+
+@import "navbar";
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-container {
+  flex-grow: 2;
+  padding: 80px 0 20px;
+}
+
+.content-container {
+  @include fill-parent(height);
+}
+
+@import "card-configure";
+@import "card-bars";
+@import "footer";
+
+// box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+// box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);

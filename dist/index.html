@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META DATA -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- EXTERNAL LIBRARIES FILES -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Indie+Flower&family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- END OF EXTERNAL LIBRARIES FILES -->
+
+    <link rel="stylesheet" href="css/sorting.css" />
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="images/bar-chart.png"
+          alt="logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-top logo"
+        />
+        <span class="heading align-top">Sorting Visualizer</span></a
+      >
+    </nav>
+    <div class="main-container">
+      <div class="inner-container">
+        <div class="row content-container">
+          <div class="col col-lg-4 col-xl-3">
+            <div class="card">
+              <div class="card-header">Configure</div>
+              <div class="row">
+                <div class="col no-padding">
+                  <div class="row">
+                    <button class="btn btn-primary btn-array">
+                      Randomize Array
+                    </button>
+                  </div>
+                  <hr class="dropdown-divider" />
+                  <div class="row style-card">
+                    <div class="col-12 no-padding">
+                      <div class="row">
+                        <div class="col-6 no-padding" style="border-right: 1px solid black;">
+                          <ul>
+                            <li>
+                              <input
+                                type="radio"
+                                name="name"
+                                id="one"
+                                checked
+                              />
+                              <label for="one">Normal</label>
+
+                              <div class="check"></div>
+                            </li>
+
+                            <li>
+                              <input type="radio" name="name" id="two" />
+                              <label for="two">Compact</label>
+
+                              <div class="check"></div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-6">
+                          <input id="s1" type="checkbox" class="switch" />
+                          <label for="s1">Switch</label>
+
+                          <!-- <span class="animate-switch">Animate?</span> -->
+                          <!-- <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                          </label> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-4">
+                        <span> No of bars </span>
+                      </div>
+                      <div class="col-5">
+                        <input
+                          id="arr_sz"
+                          class="input-range"
+                          type="range"
+                          oninput="addBars()"
+                          min="10"
+                          max="100"
+                          step="1"
+                          value="60"
+                        />
+                      </div>
+                      <div class="col-3">
+                        <span id="bar-size">60</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <span> Speed </span>
+                      </div>
+                      <div class="col-5">
+                        <input
+                          id="sort_speed"
+                          class="input-range"
+                          type="range"
+                          min="1"
+                          max="1000"
+                          step="1"
+                          value="10"
+                          oninput="updateSpeed()"
+                        />
+                      </div>
+                      <div class="col-3">
+                        <span id="speedText">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-6">
+                  <div class="row">
+                    <div class="col-6">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick="bubbleSort()"
+                      >
+                        Bubble Sort
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick=""
+                      >
+                        Selection Sort
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick=""
+                      >
+                        Insertion Sort
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick=""
+                      >
+                        Shell Sort
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick=""
+                      >
+                        Quick Sort
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-outline-primary btn-sort"
+                        onclick=""
+                      >
+                        Merge Sort
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col"> -->
+              <!-- <span class="animate-switch">Style 1</span>
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                      </label>
+                      <span class="animate-switch">Style 2</span> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="col col-lg-8 col-xl-9 col-bars">
+            <div id="bars"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <a
+          class="github-link"
+          href="https://github.com/DivyanshThakur"
+          title="Visit my GitHub profile"
+          target="_blank"
+        >
+          Made with 💖 by <span class="dev">Divyansh Singh Thakur</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/sorting.js"></script>
+    <script src="js/bubble.js"></script>
+  </body>
+</html>

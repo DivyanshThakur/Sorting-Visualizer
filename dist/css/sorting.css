@@ -1,0 +1,337 @@
+@charset "UTF-8";
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+}
+
+.logo {
+  margin: 0 10px;
+}
+
+.heading {
+  font-family: "Berkshire Swash", cursive;
+}
+
+.heading:hover {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inner-container {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding: 80px 0 20px;
+}
+
+.content-container {
+  height: 100%;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 10px 38px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 38px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border-radius: 2rem 2rem 0 0 !important;
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 24px;
+  padding: 0.5rem 1.25rem;
+}
+
+.col-bars {
+  padding-left: 20px !important;
+}
+
+.btn-array {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  margin: 0.5rem 1.25rem 0;
+}
+
+.btn-array:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-sort {
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 2rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btn-sort:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.input-range {
+  position: relative;
+  top: 3px;
+}
+
+#bar-size {
+  margin-right: 25px;
+}
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --primary-c: #2196f3;
+  --secondary-c: #b2d7f5;
+  --white: #fdfbfb;
+  --text: #082943;
+  --bg: var(--primary-c);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 40px;
+  margin: 0;
+}
+
+li {
+  display: block;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.style-card {
+  margin: 0.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--white);
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 10px 38px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 38px rgba(0, 0, 0, 0.15);
+}
+
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Reset */
+input#one ~ .check {
+  -webkit-transform: translate(-34px, -30px);
+          transform: translate(-34px, -30px);
+  background: var(--secondary-c);
+}
+
+input#two ~ .check {
+  -webkit-transform: translate(-35px, -72px);
+          transform: translate(-35px, -72px);
+  background: var(--primary-c);
+  -webkit-box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+          box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+}
+
+/* Radio Input #1 */
+input#one:checked ~ .check {
+  -webkit-transform: translate(-35px, 12px);
+          transform: translate(-35px, 12px);
+}
+
+/* Radio Input #2  */
+input#two:checked ~ .check {
+  -webkit-transform: translate(-35px, -29px);
+          transform: translate(-35px, -29px);
+}
+
+#bars {
+  width: auto;
+  height: 100%;
+  margin: 0 10px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 2px solid black;
+  border-radius: 2rem;
+  background-color: #fff;
+  background-image: linear-gradient(rgba(244, 244, 250, 0.8) 1px, transparent 0), linear-gradient(#f4f4fa 1px, transparent 0), linear-gradient(90deg, rgba(244, 244, 250, 0.8) 1px, transparent 0), linear-gradient(90deg, #f4f4fa 1px, transparent 0), linear-gradient(transparent 3px, #fff 0, #fff 94px, transparent 0), linear-gradient(90deg, #f4f4fa 3px, transparent 0, transparent 94px, #f4f4fa 0);
+  background-size: 24px 24px, 96px 96px, 24px 24px, 96px 96px, 96px 96px, 96px 96px;
+  -webkit-box-shadow: 0 10px 30px 0.1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 30px 0.1px rgba(0, 0, 0, 0.4);
+}
+
+.bar-container {
+  width: 100%;
+  min-width: 1px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.val {
+  text-align: center;
+  font-size: 12px;
+}
+
+.bar {
+  background-color: blue;
+  border-radius: 5rem;
+  -webkit-transition: height 300ms;
+  transition: height 300ms;
+}
+
+.selectedL > .bar,
+.selectedR > .bar {
+  background-color: red;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.selectedL > .val,
+.selectedR > .val {
+  font-size: 14px;
+}
+
+.selectedL,
+.selectedR {
+  font-weight: 900;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  /* Animation */
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.selectedL {
+  -webkit-transform: scale(1.1) translateX(-10px);
+          transform: scale(1.1) translateX(-10px);
+}
+
+.selectedR {
+  -webkit-transform: scale(1.1) translateX(10px);
+          transform: scale(1.1) translateX(10px);
+}
+
+.animateDown {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  /* Animation */
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* Footer Section */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 15px;
+  font-family: "Indie Flower", cursive;
+}
+
+.github-link {
+  background-color: white;
+  padding: 7px 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  color: blue;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.github-link:hover {
+  color: darkblue;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.dev {
+  font-weight: 900;
+}
+/*# sourceMappingURL=sorting.css.map */
