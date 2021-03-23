@@ -26,22 +26,28 @@
   }
   
   
-  .bar-container {
+  // .bar-container {
+  //   display: inline-block;
+  // }
+  
+  // .val {
+  //   text-align: center;
+  //   font-size: 12px;
+  // }
+  
+
+  .col-bars {
+    padding-left: 30px !important;
+    padding-right: 0;
+  }
+
+  .bar {
     @include fill-parent(width);
     min-width: 1px;
     margin: 2px;
-    display: inline-block;
-  }
-  
-  .val {
-    text-align: center;
-    font-size: 12px;
-  }
-  
-  .bar {
     background-color: blue;
     border-radius: 5rem;
-    transition: height 300ms;
+    transition: all 0.3s ease-in-out;
   }
   
   .selectedL > .bar,
@@ -77,5 +83,3 @@
     transition: transform 0.1s; /* Animation */
     transform: none;
   }
-  
-  

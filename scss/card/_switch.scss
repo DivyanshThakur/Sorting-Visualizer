@@ -1,0 +1,144 @@
+.switch {
+	width: 60px;
+	height: 30px;
+}
+
+
+
+.switch-animation {
+	padding-left: 10px;
+  
+	div {
+	  text-align: center;
+	}
+  }
+	
+
+span {
+	font-size: 1rem;
+}
+
+.switch-container {
+	height: 100%;
+}
+
+
+.toggle {
+	display: inline-block;
+	position: relative;
+	border: 2px solid #444249;
+	border-radius: 20px;
+	-webkit-transition: border-color 0.6s ease-out;
+	transition: border-color 0.6s ease-out;
+	box-sizing: border-box;
+	cursor: pointer;
+	
+}
+
+ 
+.toggle.toggle-on {
+	border-color: rgba(26, 41, 243, 0.418);
+	/* border-color: rgba(137, 194, 217, 0.4); */
+	-webkit-transition: all 0.5s 0.15s ease-out;
+	transition: all 0.5s 0.15s ease-out;
+  }
+ 
+.toggle-button {
+	position: absolute;
+	width: 24px;
+	top: 2px;
+	bottom: 2px;
+	right: 30px;
+	background-color: #444249;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-transition: all 0.3s 0.1s, width 0.1s, top 0.1s, bottom 0.1s;
+	transition: all 0.3s 0.1s, width 0.1s, top 0.1s, bottom 0.1s; 	
+  }
+
+  .toggle-on .toggle-button {
+	top: 2px;
+	width: 52px;
+	bottom: 2px;
+	right: 2px;
+	border-radius: 23px;
+	background-color: #3a0eff;
+	box-shadow: 0 0 16px #0c91e9a1;
+	-webkit-transition: all 0.2s 0.1s, right 0.1s;
+	transition: all 0.2s 0.1s, right 0.1s;
+  }  
+  
+
+.toggle-text-on {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+	line-height: 14px;
+	text-align: center;
+	font-family: "Quicksand", sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+  
+	color: rgba(0, 0, 0, 0);
+  }
+
+  
+  .toggle-on .toggle-text-on {
+	color: #b0def3;
+	-webkit-transition: color 0.3s 0.15s;
+	transition: color 0.3s 0.15s;
+  }
+  
+
+
+.toggle-text-off {
+	position: absolute;
+    top: 50%;
+	right: 4px;
+    transform: translateY(-50%);
+	text-align: center;
+	font-family: "Quicksand", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	user-select: none;
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+  
+	cursor: pointer;
+  
+	color: #444249;
+  }
+
+    
+  .toggle-on .toggle-text-off {
+	color: rgba(0, 0, 0, 0);
+  }
+  
+    /* used for streak effect */
+	.glow-comp {
+		position: absolute;
+		opacity: 0;
+		top: 2px;
+		bottom: 2px;
+		left: 2px;
+		right: 2px;
+		border-radius: 12px;
+		background-color: rgba(75, 122, 141, 0.1);
+		box-shadow: 0 0 6px rgba(75, 122, 141, 0.2);
+		-webkit-transition: opacity 4.5s 1s;
+		transition: opacity 4.5s 1s;
+	  }
+	  
+	  .toggle-on .glow-comp {
+		opacity: 1;
+		-webkit-transition: opacity 1s;
+		transition: opacity 1s;
+	  }
+	  
