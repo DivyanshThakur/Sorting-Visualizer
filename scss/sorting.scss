@@ -26,8 +26,6 @@ body {
   }
 }
 
-<<<<<<< Updated upstream
-=======
 .no-effect {
   transform: scale(0.9, 0.9);
   box-shadow: none !important;
@@ -38,6 +36,5 @@ body {
   transition: all 1s;
 }
 
->>>>>>> Stashed changes
 @import "partials/canvas";
 @import "partials/card/config";

@@ -20,16 +20,6 @@ $("body").ready(function() {
         //                .append(bar)
         //                .append(val);
 
-<<<<<<< Updated upstream
-        barArray.push(bar);
-    }
-
-        // addBars();   
-        // setTimeout(() => randomize(), 500); 
-        // randomize();
-});
-
-=======
         
         barArray.push(bar);
     }
@@ -49,7 +39,6 @@ function animate() {
 
 }
 
->>>>>>> Stashed changes
 
 function getRandom() {
     return Math.floor(Math.random()*100) + 1;
@@ -83,9 +72,5 @@ function updateSpeed() {
 }
 
 $('.toggle').click(function(e){
-<<<<<<< Updated upstream
-    e.preventDefault(); // The flicker is a codepen thing
-=======
->>>>>>> Stashed changes
     $(this).toggleClass('toggle-on');
   });
