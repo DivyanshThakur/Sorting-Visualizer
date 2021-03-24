@@ -1,9 +1,8 @@
 .radio-style {
+  position: relative;
   border-right: 1px solid $divider-color;
 }
 
-/* Radio Button
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="radio"] {
     position: absolute;
     visibility: hidden;
@@ -25,12 +24,12 @@ input[type="radio"] {
   /* Reset */
   input#one ~ .check {
     transform: translate(-34px, -30px);
-    background: var(--secondary-c);
+    background: $secondary-color;
   }
   input#two ~ .check {
     transform: translate(-35px, -72px);
-    background: var(--primary-c);
-    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+    background: $primary-color;
+    box-shadow: 0 6px 5px rgba(33, 150, 243, 0.35);
   }
   
   /* Radio Input #1 */

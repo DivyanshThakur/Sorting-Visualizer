@@ -1,25 +1,30 @@
-@import "extras/variables";
-@import "extras/functions";
+@import "partials/variables";
+
+@mixin transform($scale: 1.1, $duration: 0.5s) {
+  transition: transform $duration;
+
+  &:hover {
+    transform: scale($scale);
+    box-shadow: 0 0 10px $shadow-dark;
+  }
+}
 
 body {
   font-family: $font-body;
   cursor: default;
 }
 
-@import "extras/navbar";
+@import "partials/navbar";
 
 .main-container {
   width: 100vw;
   height: 92vh;
   padding: 20px 20px 30px;
+
+  .content-container {
+    height: 100%;
+  }
 }
 
-.content-container {
-  @include fill-parent(height);
-}
-
-@import "canvas/canvas";
-@import "card/config";
-
-// box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
-// box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+@import "partials/canvas";
+@import "partials/card/config";

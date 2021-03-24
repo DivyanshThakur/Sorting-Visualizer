@@ -23,8 +23,8 @@ $("body").ready(function() {
         barArray.push(bar);
     }
 
-        addBars();   
-        setTimeout(() => randomize(), 500); 
+        // addBars();   
+        // setTimeout(() => randomize(), 500); 
         // randomize();
 });
 

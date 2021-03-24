@@ -1,11 +1,13 @@
 $font-heading: "Berkshire Swash", cursive;
 $font-body: "Cabin", sans-serif;
-$font-footer: "Indie Flower", cursive;
+
 $shadow-lighter: rgba(0, 0, 0, 0.15);
 $shadow-light: rgba(0, 0, 0, 0.2);
 $shadow-dark: rgba(0, 0, 0, 0.4);
 $shadow-darker: rgba(0, 0, 0, 0.6);
-$divider-color: #e9ecef;
-$font-weights: (
-    "bold": 900
-);
+
+$primary-color: #2196f3;
+$secondary-color: #b2d7f5;
+$white: #fdfbfb;
+$text-color: #082943;
+$divider-color: rgba(0, 0, 0, 0.1);

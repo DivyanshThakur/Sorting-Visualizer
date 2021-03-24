@@ -13,9 +13,7 @@
 }
 
 .card {
-  @include fill-parent(width);
-  padding-bottom: 10px;
-  
+  width: 100%;
   border-radius: 2rem;
   box-shadow: 0 10px 38px $shadow-lighter;
 }
@@ -28,44 +26,31 @@
   padding: 0.5rem 1.25rem;
 }
 
+.card-inner-content {
+  padding: 0px 20px 10px;
+}
 
 .btn-array {
-  @include fill-parent(width);
   @include transform($scale: 1.05);
+  width: 100%;
   margin: 0.5rem 1.25rem 0;
 }
 
 .btn-sort {
   margin: 5px 0;
-  @include fill-parent(width);
+  width: 100%;
   border-radius: 2rem;
   @include transform();
-}
-
-.input-range {
-  position: relative;
-  top: 3px;
 }
 
 #bar-size {
   margin-right: 25px;
 }
 
-/* Variables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-  --primary-c: #2196f3;
-  --secondary-c: #b2d7f5;
-
-  --white: #fdfbfb;
-
-  --text: #082943;
-  --bg: var(--primary-c);
-}
-
 ul {
   list-style-type: none;
-  // padding-left: 40px;
+  padding-left: 50%;
+  transform: translateX(-20px);
   margin: 0;
 }
 
@@ -78,10 +63,11 @@ li {
 /* Card
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .style-card {
-  margin: 0.5rem 1.25rem;
+  margin: 0;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  background: var(--white);
+  background: $white;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0 10px 38px $shadow-lighter;

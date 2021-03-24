@@ -1,6 +1,6 @@
 #bars {  
     width: auto;
-    @include fill-parent(height);
+    height: 100%;
     margin: 0 10px;
     padding: 10px 20px;
     display: flex;
@@ -24,17 +24,6 @@
       96px 96px;
       box-shadow: 0 10px 30px 0.1px $shadow-dark;
   }
-  
-  
-  // .bar-container {
-  //   display: inline-block;
-  // }
-  
-  // .val {
-  //   text-align: center;
-  //   font-size: 12px;
-  // }
-  
 
   .col-bars {
     padding-left: 30px !important;
@@ -42,7 +31,7 @@
   }
 
   .bar {
-    @include fill-parent(width);
+    width: 100%;
     min-width: 1px;
     margin: 2px;
     background-color: blue;
@@ -51,31 +40,25 @@
   }
   
   .selectedL > .bar,
-  .selectedR > .bar {
-    background-color: red;
-    box-shadow: 0px 5px 20px $shadow-darker;
-  }
-  
-  .selectedL > .val,
-  .selectedR > .val {
-    font-size: 14px;
-  }
-  
-  .selectedL,
-  .selectedR {
-    font-weight: 900;
-  
+  .selectedR > 
+
+  %selected {  
     transition: transform 0.1s; /* Animation */
-    transform: scale(
-      1.1
-    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    // transform: scale(1.1);
+
+    .bar {
+      background-color: red;
+      box-shadow: 0px 5px 20px $shadow-darker;
+    }
   }
   
   .selectedL {
+    @extend %selected;
     transform: scale(1.1) translateX(-10px);
   }
   
   .selectedR {
+    @extend %selected;
     transform: scale(1.1) translateX(10px);
   }
   

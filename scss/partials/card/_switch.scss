@@ -3,16 +3,13 @@
 	height: 30px;
 }
 
-
-
 .switch-animation {
 	padding-left: 10px;
   
 	div {
 	  text-align: center;
 	}
-  }
-	
+}
 
 span {
 	font-size: 1rem;
@@ -26,7 +23,7 @@ span {
 .toggle {
 	display: inline-block;
 	position: relative;
-	border: 2px solid #444249;
+	border: 2px solid #706c79;
 	border-radius: 20px;
 	-webkit-transition: border-color 0.6s ease-out;
 	transition: border-color 0.6s ease-out;
@@ -38,7 +35,6 @@ span {
  
 .toggle.toggle-on {
 	border-color: rgba(26, 41, 243, 0.418);
-	/* border-color: rgba(137, 194, 217, 0.4); */
 	-webkit-transition: all 0.5s 0.15s ease-out;
 	transition: all 0.5s 0.15s ease-out;
   }
@@ -49,7 +45,7 @@ span {
 	top: 2px;
 	bottom: 2px;
 	right: 30px;
-	background-color: #444249;
+	background-color: #706c79;;
 	border-radius: 50%;
 	cursor: pointer;
 	-webkit-transition: all 0.3s 0.1s, width 0.1s, top 0.1s, bottom 0.1s;
@@ -62,8 +58,8 @@ span {
 	bottom: 2px;
 	right: 2px;
 	border-radius: 23px;
-	background-color: #3a0eff;
-	box-shadow: 0 0 16px #0c91e9a1;
+	background-color: $primary-color;
+	box-shadow: 0 0 2px #0096fa;
 	-webkit-transition: all 0.2s 0.1s, right 0.1s;
 	transition: all 0.2s 0.1s, right 0.1s;
   }  
@@ -90,12 +86,10 @@ span {
 
   
   .toggle-on .toggle-text-on {
-	color: #b0def3;
+	color: $white;
 	-webkit-transition: color 0.3s 0.15s;
 	transition: color 0.3s 0.15s;
   }
-  
-
 
 .toggle-text-off {
 	position: absolute;

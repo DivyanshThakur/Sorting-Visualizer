@@ -39,7 +39,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Indie+Flower&family=Cabin&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cabin&display=swap"
       rel="stylesheet"
     />
 
@@ -67,16 +67,16 @@
       </a>
       <a
         class="github"
-        href="https://github.com/divyanshthakur"
-        title="Visit my GitHub profile"
+        href="https://github.com/divyanshthakur" 
+        target="_blank" 
       >
-        <i class="fab fa-github fa-2x"></i>
+      <div class="github-title">Visit my GitHub profile</div>
+      <i class="fab fa-github fa-2x"></i>
       </a>
     </nav>
     <div class="main-container">
       <div class="row content-container">
-        <div class="col col-lg-4 col-xl-3 no-padding">
-          
+        <div class="col col-lg-4 col-xl-3 align-self-center no-padding">
           <div class="card">
             <div class="card-header">Configure</div>
             <div class="card-content">
@@ -87,9 +87,9 @@
               </div>
               <hr class="card-divider" />
 
-              <div class="row">
+              <div class="row card-inner-content">
                 <!-- style card row start -->
-                <div class="col style-card">
+                <div class="col-12 style-card">
                   <div class="row">
                     <div class="col-5 no-padding radio-style">
                       <ul>
@@ -108,10 +108,12 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="col-7 switch-container">
-                      <div class="row switch-animation align-items-center">
-                        <div class="col-6 no-padding">3D Animation?</div>
-                        <div class="col-6 no-padding">
+                    <div class="col-7 no-padding switch-container">
+                      <div class="row align-items-center switch-animation">
+                        <div class="col-7 no-padding" title="3D Animation?">
+                          3D?
+                        </div>
+                        <div class="col-5 no-padding">
                           <div class="toggle switch">
                             <div class="toggle-text-off">OFF</div>
                             <div class="glow-comp"></div>
@@ -121,9 +123,14 @@
                         </div>
                       </div>
 
-                      <div class="row switch-animation align-items-center">
-                        <div class="col-6 no-padding">Comparison?</div>
-                        <div class="col-6 no-padding">
+                      <div class="row align-items-center switch-animation">
+                        <div
+                          class="col-7 no-padding"
+                          title="Compare the Algorithm"
+                        >
+                          Compare?
+                        </div>
+                        <div class="col-5 no-padding">
                           <div class="toggle switch">
                             <div class="toggle-text-off">OFF</div>
                             <div class="glow-comp"></div>
@@ -135,7 +142,7 @@
                     </div>
                   </div>
 
-                  <hr />
+                  <hr class="card-divider" />
 
                   <div class="row">
                     <div class="row slider-container">
@@ -145,7 +152,7 @@
                       <div class="col-7">
                         <input
                           id="arr_size"
-                          class="input-range"
+                          class="slider"
                           type="range"
                           oninput="addBars()"
                           min="10"
@@ -163,7 +170,7 @@
                       <div class="col-7">
                         <input
                           id="sort_speed"
-                          class="input-range"
+                          class="slider"
                           type="range"
                           min="1"
                           max="1000"
@@ -176,9 +183,8 @@
                   </div>
                 </div>
                 <!-- style card row end -->
-                <hr class="card-divider" />
                 <!-- style card row start -->
-                <div class="col style-card">
+                <div class="col-12 style-card">
                   <div class="row">
                     <div class="col-6">
                       <button class="btn btn-outline-primary btn-sort">
@@ -226,14 +232,10 @@
                 </div>
                 <!-- style card row end -->
               </div>
-
-
             </div>
-
-
           </div>
-
         </div>
+
         <div class="col-12 col-lg-8 col-xl-9 col-bars">
           <div id="bars"></div>
         </div>
