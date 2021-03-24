@@ -24,21 +24,20 @@ $("body").ready(function() {
         barArray.push(bar);
     }
     
-        animate();
-        addBars();
+    animateOnLoad();
+    addBars();
         setTimeout(() => randomize(), 500); 
 });
 
-function animate() {
+function animateOnLoad() {
     $(".no-effect").not(".after").addClass("add-effect").removeClass("no-effect");
     
     setTimeout(function() {
         $(".style-card.no-effect").addClass("add-effect").removeClass("no-effect");
         $(".fab").addClass("add-effect").removeClass("no-effect");
-    }, 500);
+    }, 00);
 
 }
-
 
 function getRandom() {
     return Math.floor(Math.random()*100) + 1;

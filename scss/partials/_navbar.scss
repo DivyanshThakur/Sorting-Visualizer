@@ -33,6 +33,7 @@
     }
 
     &-title {
+      font-family: $font-my-intro;
       position: absolute;
       display: inline-block;
       overflow: hidden;
@@ -48,17 +49,17 @@
       width: 36px;
       right: -2px;
       bottom: 0;
-      padding-top: 5px;
+      padding-top: 4px;
     }
 
     &:hover {
       color: rgba(0, 0, 0, 0.9);
 
       .github-title {
-        padding: 5px 40px 3px 10px;
+        padding: 4px 40px 3px 10px;
         position: absolute;
         color: black;
-        width: 205px;
+        width: 175px;
         height: 36px;
       }
     }
