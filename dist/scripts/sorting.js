@@ -20,6 +20,7 @@ $("body").ready(function() {
         //                .append(bar)
         //                .append(val);
 
+<<<<<<< Updated upstream
         barArray.push(bar);
     }
 
@@ -28,6 +29,27 @@ $("body").ready(function() {
         // randomize();
 });
 
+=======
+        
+        barArray.push(bar);
+    }
+    
+        animate();
+        addBars();
+        setTimeout(() => randomize(), 500); 
+});
+
+function animate() {
+    $(".no-effect").not(".after").addClass("add-effect").removeClass("no-effect");
+    
+    setTimeout(function() {
+        $(".style-card.no-effect").addClass("add-effect").removeClass("no-effect");
+        $(".fab").addClass("add-effect").removeClass("no-effect");
+    }, 500);
+
+}
+
+>>>>>>> Stashed changes
 
 function getRandom() {
     return Math.floor(Math.random()*100) + 1;
@@ -61,6 +83,9 @@ function updateSpeed() {
 }
 
 $('.toggle').click(function(e){
+<<<<<<< Updated upstream
     e.preventDefault(); // The flicker is a codepen thing
+=======
+>>>>>>> Stashed changes
     $(this).toggleClass('toggle-on');
   });
