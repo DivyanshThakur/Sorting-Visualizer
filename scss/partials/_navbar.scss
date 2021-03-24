@@ -1,0 +1,64 @@
+.navbar {
+  z-index: 2;
+  width: 100vw;
+  height: 8vh;
+
+  .logo {
+    margin: 0 10px;
+
+    .heading {
+      font-family: $font-heading;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .github {
+    position: relative;
+
+    &:link,
+    &:active,
+    &:visited {
+      color: black;
+    }
+
+    .fa-github {
+      background-color: $white;
+      border-radius: 21px;
+      box-shadow: 0 2px 10px $shadow-lighter;
+    }
+
+    &-title {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      z-index: -1;
+      transition: all 1000ms ease-in-out;
+      border: 1px solid black;
+      border-radius: 21px;
+      box-shadow: 0 2px 10px $shadow-lighter;
+      background-color: $white;
+      white-space: nowrap;
+      color: $white;
+      height: 36px;
+      width: 36px;
+      right: -2px;
+      bottom: 0;
+      padding-top: 5px;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.9);
+
+      .github-title {
+        padding: 5px 40px 3px 10px;
+        position: absolute;
+        color: black;
+        width: 205px;
+        height: 36px;
+      }
+    }
+  }
+}

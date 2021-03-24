@@ -1,0 +1,44 @@
+.radio-style {
+  position: relative;
+  border-right: 1px solid $divider-color;
+}
+
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  
+  .check {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  /* Reset */
+  input#one ~ .check {
+    transform: translate(-34px, -30px);
+    background: $secondary-color;
+  }
+  input#two ~ .check {
+    transform: translate(-35px, -72px);
+    background: $primary-color;
+    box-shadow: 0 6px 5px rgba(33, 150, 243, 0.35);
+  }
+  
+  /* Radio Input #1 */
+  input#one:checked ~ .check {
+    transform: translate(-35px, 12px);
+  }
+  
+  /* Radio Input #2  */
+  input#two:checked ~ .check {
+    transform: translate(-35px, -30px);
+  }
+  

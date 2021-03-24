@@ -1,0 +1,77 @@
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-divider {
+  margin: 0.5rem 0;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card {
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 10px 38px $shadow-lighter;
+}
+
+.card-header {
+  border-radius: 2rem 2rem 0 0 !important;
+  text-align: center;
+  font-family: $font-heading;
+  font-size: 24px;
+  padding: 0.5rem 1.25rem;
+}
+
+.card-inner-content {
+  padding: 0px 20px 10px;
+}
+
+.btn-array {
+  @include transform($scale: 1.05);
+  width: 100%;
+  margin: 0.5rem 1.25rem 0;
+}
+
+.btn-sort {
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 2rem;
+  @include transform();
+}
+
+#bar-size {
+  margin-right: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 50%;
+  transform: translateX(-20px);
+  margin: 0;
+}
+
+li {
+  display: block;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.style-card {
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 38px $shadow-lighter;
+}
+@import "radio";
+@import "switch";
+@import "slider";
