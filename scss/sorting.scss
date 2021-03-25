@@ -1,6 +1,6 @@
 @import "partials/variables";
 
-@mixin transform($scale: 1.1, $duration: 0.3s) {
+@mixin transform($scale: 1.1, $duration: 0.5s) {
   transition: transform $duration;
 
   &:hover {
@@ -19,21 +19,43 @@ body {
 .main-container {
   width: 100vw;
   height: 92vh;
-  padding: 20px 0 30px;
 
-  .content-container {
-    height: 100%;
-  }
+}
+
+.inner-container {
+  min-width: 350px;
+}
+
+.padding-all {
+  padding: 20px !important; 
 }
 
 .no-effect {
   transform: scale(0.9, 0.9);
   box-shadow: none !important;
-  border: none !important;
+  border: none;
 }
 
 .add-effect {
   transition: all 1s;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .bar-container {
+    max-width: 70%; 
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .bar-container {
+    max-width: 72%; 
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1050px) {
+  .bar-container {
+    max-width: 64%; 
+  }
 }
 
 @import "partials/canvas";

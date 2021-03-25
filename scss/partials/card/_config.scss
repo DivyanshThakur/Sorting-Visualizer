@@ -36,11 +36,32 @@
   margin: 0.5rem 1.25rem 0;
 }
 
+.adjust-button {
+  padding: 0;
+
+  &:nth-child(even) {
+    padding-left: 5px;
+  }
+
+  &:nth-child(odd) {
+    padding-right: 5px;
+  }
+}
+
 .btn-sort {
   margin: 5px 0;
   width: 100%;
+  min-width: 120px;
   border-radius: 2rem;
   @include transform();
+
+  // &:nth-child(odd) {
+  //   margin-left: 10px !important;
+  // }
+
+  // &:nth-child(even) {
+  //   margin-right: 10px !important;
+  // }
 }
 
 #bar-size {
