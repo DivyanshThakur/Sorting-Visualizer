@@ -11,15 +11,8 @@ $("body").ready(function() {
 
     for(var i = 0; i<max_size; i++) {
         const bar = document.createElement("div");
-        // const val = document.createElement("div");
-        // const bar = document.createElement("div");
 
         $(bar).addClass("bar").css("height", "0px");
-        // $(val).addClass("val").text(1);
-        // $(barContainer).addClass("bar-container")
-        //                .append(bar)
-        //                .append(val);
-
         
         barArray.push(bar);
     }
@@ -70,6 +63,25 @@ function updateSpeed() {
     speedText.innerHTML = speed;
 }
 
+// Code for Bar Style
+
+$('input[name="radio"]').click(function(e) {
+    switch (e.target.id) {
+        case 'one':
+            $(this).not("normal-style").addClass("normal-style").removeClass("compact-style");
+            break;
+        case 'two':
+            $(this).not("compact-style").addClass("compact-style").removeClass("normal-style");
+            break;
+        default:
+            console.log("Unknown error occurred in radio card");
+    }
+});
+
+$('input[name="radio"]:checked').val();
+
+// toggle the switch animation
+
 $('.toggle').click(function(e){
     $(this).toggleClass('toggle-on');
-  });
+});
