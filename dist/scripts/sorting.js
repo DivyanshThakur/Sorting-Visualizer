@@ -26,7 +26,7 @@ $("body").ready(function() {
     
     animateOnLoad();
     addBars();
-        setTimeout(() => randomize(), 500); 
+    setTimeout(() => randomize(), 600); 
 });
 
 function animateOnLoad() {
@@ -35,7 +35,7 @@ function animateOnLoad() {
     setTimeout(function() {
         $(".style-card.no-effect").addClass("add-effect").removeClass("no-effect");
         $(".fab").addClass("add-effect").removeClass("no-effect");
-    }, 00);
+    }, 600);
 
 }
 

@@ -29,7 +29,7 @@ body {
 .no-effect {
   transform: scale(0.9, 0.9);
   box-shadow: none !important;
-  border: none;
+  border: none !important;
 }
 
 .add-effect {

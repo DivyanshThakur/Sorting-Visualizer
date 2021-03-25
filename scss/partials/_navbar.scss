@@ -5,14 +5,11 @@
 
   .logo {
     margin: 0 10px;
+  }
 
-    .heading {
-      font-family: $font-heading;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
+  .heading {
+    font-family: $font-heading;
+    font-size: large;
   }
 
   .github {
