@@ -58,5 +58,23 @@ body {
   }
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .adjust-button {
+    &:nth-child(4n-1) {
+      padding-left: 5px;
+    }
+
+    &:nth-child(4n-2) {
+      padding-right: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .inner-container {
+    min-width: 0;
+  }
+}
+
 @import "partials/canvas";
 @import "partials/card/config";
