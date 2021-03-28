@@ -58,9 +58,9 @@ function addBars() {
 }
 
 function updateSpeed() {
-    const speed = document.querySelector("#sort_speed").value;
-    const speedText = document.getElementById("speedText");
-    speedText.innerHTML = speed;
+    // const speed = document.querySelector("#sort_speed").value;
+    // const speedText = document.getElementById("speedText");
+    // speedText.innerHTML = speed;
 }
 
 // Code for Bar Style
