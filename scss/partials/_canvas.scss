@@ -1,80 +1,70 @@
-  .bar-container {
-    padding-top: 10px;
-    padding-bottom: 10px;   
-  }
+.bar-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  #bars {  
-    width: auto;
-    height: 100%;
-    margin: 0 10px;
-    padding: 20px 20px;
-    display: flex;
-    align-items: flex-end;
-    border: 2px solid black;
-    border-radius: 2rem;
-    background-color: #fff;
-    background-image: linear-gradient(rgba(244, 244, 250, 0.8) 1px, transparent 0),
-      linear-gradient(#f4f4fa 1px, transparent 0),
-      linear-gradient(90deg, rgba(244, 244, 250, 0.8) 1px, transparent 0),
-      linear-gradient(90deg, #f4f4fa 1px, transparent 0),
-      linear-gradient(transparent 3px, #fff 0, #fff 94px, transparent 0),
-      linear-gradient(
-        90deg,
-        #f4f4fa 3px,
-        transparent 0,
-        transparent 94px,
-        #f4f4fa 0
-      );
-    background-size: 24px 24px, 96px 96px, 24px 24px, 96px 96px, 96px 96px,
-      96px 96px;
-      box-shadow: 0 10px 30px 0.1px $shadow-dark;
-  }
+#bars {
+  width: auto;
+  height: 100%;
+  margin: 0 10px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: flex-end;
+  border: 2px solid black;
+  border-radius: 2rem;
+  background-color: #fff;
+  background-image: linear-gradient(rgba(244, 244, 250, 0.8) 1px, transparent 0),
+    linear-gradient(#f4f4fa 1px, transparent 0),
+    linear-gradient(90deg, rgba(244, 244, 250, 0.8) 1px, transparent 0),
+    linear-gradient(90deg, #f4f4fa 1px, transparent 0),
+    linear-gradient(transparent 3px, #fff 0, #fff 94px, transparent 0),
+    linear-gradient(
+      90deg,
+      #f4f4fa 3px,
+      transparent 0,
+      transparent 94px,
+      #f4f4fa 0
+    );
+  background-size: 24px 24px, 96px 96px, 24px 24px, 96px 96px, 96px 96px,
+    96px 96px;
+  box-shadow: 0 10px 30px 0.1px $shadow-dark;
+}
+
+.bar {
+  width: 100%;
+  min-width: 1px;
+  margin: 2px;
+  background-color: blue;
+  border-radius: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+// .active {
+
+// }
+
+.selectedL > .bar,
+.selectedR > %selected {
+  transition: transform 0.1s; /* Animation */
+  // transform: scale(1.1);
 
   .bar {
-    width: 100%;
-    min-width: 1px;
-    margin: 2px;
-    background-color: blue;
-    border-radius: 5rem;
-    transition: all 0.3s ease-in-out;
+    background-color: red;
+    box-shadow: 0px 5px 20px $shadow-darker;
   }
+}
 
+.selectedL {
+  @extend %selected;
+  transform: scale(1.1) translateX(-10px);
+}
 
+.selectedR {
+  @extend %selected;
+  transform: scale(1.1) translateX(10px);
+}
 
-  // .active {
-
-  // }
-
-
-
-
-
-
-  
-  .selectedL > .bar,
-  .selectedR > 
-
-  %selected {  
-    transition: transform 0.1s; /* Animation */
-    // transform: scale(1.1);
-
-    .bar {
-      background-color: red;
-      box-shadow: 0px 5px 20px $shadow-darker;
-    }
-  }
-  
-  .selectedL {
-    @extend %selected;
-    transform: scale(1.1) translateX(-10px);
-  }
-  
-  .selectedR {
-    @extend %selected;
-    transform: scale(1.1) translateX(10px);
-  }
-  
-  .animateDown {
-    transition: transform 0.1s; /* Animation */
-    transform: none;
-  }
+.animateDown {
+  transition: transform 0.1s; /* Animation */
+  transform: none;
+}

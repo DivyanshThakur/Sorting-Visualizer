@@ -28,7 +28,7 @@ function animateOnLoad() {
     setTimeout(function() {
         $(".style-card.no-effect").addClass("add-effect").removeClass("no-effect");
         $(".fab").addClass("add-effect").removeClass("no-effect");
-    }, 600);
+    }, 00);
 
 }
 
