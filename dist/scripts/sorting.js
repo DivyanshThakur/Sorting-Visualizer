@@ -45,26 +45,28 @@ playButton.addEventListener("click", () => {
         break;
 
       case "merge":
-        mergeSort();
-        break;
+      // mergeSort();
+      // break;
 
       case "quick":
-        quickSort();
-        break;
+      // quickSort();
+      // break;
 
       case "heap":
-        heapSort();
-        break;
+      // heapSort();
+      // break;
 
       case "cycle":
-        cycleSort();
-        break;
+      // cycleSort();
+      // break;
 
       case "shell":
-        shellSort();
-        break;
+      // shellSort();
+      // break;
 
       default:
+        alert("Coming Soon...");
+        reset();
         break;
     }
   } else {
