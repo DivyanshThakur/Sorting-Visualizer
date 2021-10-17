@@ -66,177 +66,138 @@
       </a>
       <a
         class="github"
-        href="https://github.com/divyanshthakur" 
-        target="_blank" 
+        href="https://github.com/divyanshthakur"
+        target="_blank"
       >
-      <div class="github-title no-effect">@DivyanshThakur</div>
-      <i class="fab fa-github fa-2x no-effect after"></i>
+        <div class="github-title no-effect">@DivyanshThakur</div>
+        <i class="fab fa-github fa-2x no-effect after"></i>
       </a>
     </nav>
     <div class="row main-container">
-        <div class="col col-lg-4 col-xl-3 align-self-center padding-all inner-container">
-          <div class="card no-effect">
-            <div class="card-header">Configure</div>
-            <div class="card-content">
-              <div class="row">
-                <button class="btn btn-primary btn-array">
-                  Randomize Array
-                </button>
-              </div>
-              <hr class="card-divider" />
+      <div
+        class="
+          col col-lg-4 col-xl-3
+          align-self-center
+          padding-all
+          inner-container
+        "
+      >
+        <div class="card no-effect">
+          <div class="card-header">Configure</div>
+          <div class="card-content">
+            <div class="row">
+              <button class="btn btn-primary btn-array">Randomize Array</button>
+            </div>
+            <hr class="card-divider" />
 
-              <div class="row justify-content-around card-inner-content">
-                <!-- style card row start -->
-                <div class="col-md-6 col-lg-12 style-card no-effect after">
-                  <div class="row">
-                    <div class="col-5 no-padding radio-style">
-                      <ul>
-                        <li>
-                          <input type="radio" name="radio" id="one" checked />
-                          <label for="one">Normal</label>
-
-                          <div class="check"></div>
-                        </li>
-
-                        <li>
-                          <input type="radio" name="radio" id="two" />
-                          <label for="two">Compact</label>
-
-                          <div class="check"></div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-7 no-padding switch-container">
-                      <div class="row align-items-center switch-animation">
-                        <div class="col-7 no-padding" title="3D Animation?">
-                          3D?
-                        </div>
-                        <div class="col-5 no-padding">
-                          <div class="toggle switch">
-                            <div class="toggle-text-off">OFF</div>
-                            <div class="glow-comp"></div>
-                            <div class="toggle-button"></div>
-                            <div class="toggle-text-on">ON</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row align-items-center switch-animation">
-                        <div
-                          class="col-7 no-padding"
-                          title="Compare the Algorithm"
-                        >
-                          Compare?
-                        </div>
-                        <div class="col-5 no-padding">
-                          <div class="toggle switch">
-                            <div class="toggle-text-off">OFF</div>
-                            <div class="glow-comp"></div>
-                            <div class="toggle-button"></div>
-                            <div class="toggle-text-on">ON</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div class="row justify-content-around card-inner-content">
+              <!-- style card row start -->
+              <div class="col-md-6 col-lg-12 style-card no-effect after">
+                <div class="row slider-container">
+                  <div class="col-5">
+                    <span title="Update Array Size"> Array Size </span>
                   </div>
-
-                  <hr class="card-divider" />
-
-                  <div class="row">
-                    <div class="row slider-container">
-                      <div class="col-5">
-                        <span title="Update Array Size"> Array Size </span>
-                      </div>
-                      <div class="col-7">
-                        <input
-                          id="arr_size"
-                          class="slider"
-                          type="range"
-                          oninput="addBars()"
-                          min="10"
-                          max="100"
-                          step="1"
-                          value="10"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="row slider-container">
-                      <div class="col-5">
-                        <span> Speed </span>
-                      </div>
-                      <div class="col-7">
-                        <input
-                          id="sort_speed"
-                          class="slider"
-                          type="range"
-                          min="1"
-                          max="1000"
-                          step="1"
-                          value="10"
-                          oninput="updateSpeed()"
-                        />
-                      </div>
-                    </div>
+                  <div class="col-7">
+                    <input
+                      id="arr_size"
+                      class="slider"
+                      type="range"
+                      oninput="addBars()"
+                      min="15"
+                      max="50"
+                      step="1"
+                      value="15"
+                    />
                   </div>
                 </div>
-                <!-- style card row end -->
-                <!-- style card row start -->
-                <div class="col-md-5 col-lg-12 style-card no-effect after">
-                  <div class="row">
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Bubble Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Selection Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Insertion Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Merge Sort
-                      </button>
-                    </div>
+
+                <div class="row slider-container">
+                  <div class="col-5">
+                    <span> Speed </span>
                   </div>
-                  <div class="row">
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Quick Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Heap Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Cycle Sort
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 adjust-button">
-                      <button class="btn btn-outline-primary btn-sort">
-                        Shell Sort
-                      </button>
-                    </div>
+                  <div class="col-7">
+                    <input
+                      id="sort_speed"
+                      class="slider"
+                      type="range"
+                      min="10"
+                      max="1000"
+                      step="1"
+                      value="10"
+                    />
                   </div>
                 </div>
-                <!-- style card row end -->
               </div>
+              <!-- style card row end -->
+              <!-- style card row start -->
+              <div class="col-md-5 col-lg-12 style-card no-effect after">
+                <div class="row">
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button
+                      id="bubble"
+                      class="btn btn-outline-primary btn-sort"
+                    >
+                      Bubble Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button
+                      id="selection"
+                      class="btn btn-outline-primary btn-sort"
+                    >
+                      Selection Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button
+                      id="insertion"
+                      class="btn btn-outline-primary btn-sort"
+                    >
+                      Insertion Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button id="merge" class="btn btn-outline-primary btn-sort">
+                      Merge Sort
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button id="quick" class="btn btn-outline-primary btn-sort">
+                      Quick Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button id="heap" class="btn btn-outline-primary btn-sort">
+                      Heap Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button id="cycle" class="btn btn-outline-primary btn-sort">
+                      Cycle Sort
+                    </button>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6 adjust-button">
+                    <button id="shell" class="btn btn-outline-primary btn-sort">
+                      Shell Sort
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="button button--play btn-disabled">
+                <div class="button__shape button__shape--one"></div>
+                <div class="button__shape button__shape--two"></div>
+              </div>
+              <!-- style card row end -->
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-12 col-lg-8 col-xl-9 padding-all bar-container">
-          <div id="bars" class="no-effect"></div>
-        </div>
+      <div class="col-12 col-lg-8 col-xl-9 padding-all bar-container">
+        <div id="bars" class="no-effect"></div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -259,5 +220,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/sorting.js"></script>
     <script src="scripts/bubble.js"></script>
+    <script src="scripts/insertion.js"></script>
+    <script src="scripts/merge.js"></script>
+    <script src="scripts/quick.js"></script>
+    <script src="scripts/selection.js"></script>
   </body>
 </html>

@@ -34,6 +34,11 @@
   @include transform($scale: 1.05);
   width: 100%;
   margin: 0.5rem 1.25rem 0;
+
+  &:disabled {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .adjust-button {
@@ -55,6 +60,23 @@
   border-radius: 2rem;
   @include transform();
 
+  &.sort-selected {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px $shadow-dark;
+  }
+
+  &:disabled {
+    background-color: lightgray;
+    transform: none;
+    box-shadow: none;
+  }
+
+  &:disabled.sort-selected {
+    background-color: #007bff;
+  }
+
   // &:nth-child(odd) {
   //   margin-left: 10px !important;
   // }
@@ -63,6 +85,128 @@
   //   margin-right: 10px !important;
   // }
 }
+
+@mixin size($width: inherit, $height: inherit) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($vertical, $horizontal, $direction: row) {
+  display: flex;
+  align-items: $vertical;
+  justify-content: $horizontal;
+  flex-direction: $direction;
+}
+
+@mixin border-radius(
+  $topLeft: 50%,
+  $topRight: 50%,
+  $botLeft: 50%,
+  $botRight: 50%
+) {
+  border-top-left-radius: $topLeft;
+  border-top-right-radius: $topRight;
+  border-bottom-left-radius: $botLeft;
+  border-bottom-right-radius: $botRight;
+}
+
+$deepBlue-5: #f1f3f4;
+$deepBlue-10: #e4e6ea;
+$deepBlue-20: #ccced5;
+$deepBlue-40: #999eac;
+$deepBlue-60: #666d82;
+$deepBlue-80: #333d59;
+$deepBlue-90: #192445;
+$deepBlue-100: #000c2f;
+$deepBlue-120: #000923;
+
+$blue: #2e90eb;
+$salmon: #f56b72;
+
+$swipes-shadow-one: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+$swipes-shadow-two: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$swipes-shadow-three: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
+$swipes-shadow-four: 0 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.22);
+$swipes-shadow-five: 0 19px 38px rgba(0, 0, 0, 0.3),
+  0 15px 12px rgba(0, 0, 0, 0.22);
+
+.btn-disabled {
+  background-color: lightgray !important;
+  cursor: default !important;
+}
+
+.button {
+  cursor: pointer;
+  @include size(45px, 45px);
+  @include flex(center, center);
+  background-color: #007bff;
+  box-shadow: 0 10px 38px $shadow-lighter;
+
+  &--play {
+    border-radius: 50%;
+  }
+
+  &--play & {
+    &__shape {
+      width: 8px;
+      height: 23px;
+      background: white;
+      transition: 0.3s ease-in-out;
+
+      &--one {
+        clip-path: polygon(0 0, 100% 25%, 100% 75%, 0% 100%);
+        transform: translateX(2px);
+      }
+
+      &--two {
+        clip-path: polygon(0 25%, 100% 50%, 100% 50%, 0 75%);
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &--play#{&}--active & {
+    &__shape {
+      &--one {
+        clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+        transform: translateX(0px);
+      }
+
+      &--two {
+        clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+        transform: translateX(0px);
+      }
+    }
+  }
+}
+
+// .btn-play {
+//   border: unset;
+//   // border-radius: 50%;
+//   background: transparent;
+//   box-sizing: border-box;
+//   width: 0;
+//   height: 2rem;
+
+//   border-color: transparent transparent transparent #202020;
+//   transition: 100ms all ease;
+//   cursor: pointer;
+
+//   // play state
+//   border-style: solid;
+//   border-width: 1rem 0 1rem 2rem;
+
+//   &.paused {
+//     border-style: double;
+//     border-width: 0px 0 0px 1.5rem;
+//   }
+
+//   &:hover {
+//     border-color: transparent transparent transparent #404040;
+//   }
+// }
 
 #bar-size {
   margin-right: 25px;

@@ -39,29 +39,36 @@
   transition: all 0.3s ease-in-out;
 }
 
-// .active {
-
-// }
-
-.selectedL > .bar,
-.selectedR > %selected {
-  transition: transform 0.1s; /* Animation */
+.selectedL {
+  // @extend %selected;
+  transition: all 0.2s; /* Animation */
   // transform: scale(1.1);
 
-  .bar {
-    background-color: red;
-    box-shadow: 0px 5px 20px $shadow-darker;
-  }
-}
-
-.selectedL {
-  @extend %selected;
-  transform: scale(1.1) translateX(-10px);
+  background-color: red !important;
+  // box-shadow: 0px 5px 20px $shadow-darker !important;
+  // transform: scale(1.1) translateX(-10px);
 }
 
 .selectedR {
-  @extend %selected;
-  transform: scale(1.1) translateX(10px);
+  // @extend %selected;
+  transition: all 0.2s; /* Animation */
+  // transform: scale(1.1);
+
+  background-color: red !important;
+  // box-shadow: 0px 5px 20px $shadow-darker !important;
+  // transform: scale(1.1) translateX(10px);
+}
+
+.selectedTemp {
+  transition: all 0.2s;
+
+  background-color: lightskyblue !important;
+}
+
+.completed {
+  transition: all 0.2s;
+
+  background-color: green !important;
 }
 
 .animateDown {
