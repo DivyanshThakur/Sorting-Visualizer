@@ -1,39 +1,40 @@
 .bar-container {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  min-height: 80%;
 }
 
 #bars {
   width: auto;
   height: 100%;
-  margin: 0 10px;
-  padding: 20px 20px;
+  margin: 0 0.625rem;
+  padding: 1.25rem 1.25rem;
   display: flex;
   align-items: flex-end;
-  border: 2px solid black;
+  border: 0.125rem solid black;
   border-radius: 2rem;
   background-color: #fff;
-  background-image: linear-gradient(rgba(244, 244, 250, 0.8) 1px, transparent 0),
-    linear-gradient(#f4f4fa 1px, transparent 0),
-    linear-gradient(90deg, rgba(244, 244, 250, 0.8) 1px, transparent 0),
-    linear-gradient(90deg, #f4f4fa 1px, transparent 0),
-    linear-gradient(transparent 3px, #fff 0, #fff 94px, transparent 0),
+  background-image: linear-gradient(rgba(244, 244, 250, 0.8) 0.0625rem, transparent 0),
+    linear-gradient(#f4f4fa 0.0625rem, transparent 0),
+    linear-gradient(90deg, rgba(244, 244, 250, 0.8) 0.0625rem, transparent 0),
+    linear-gradient(90deg, #f4f4fa 0.0625rem, transparent 0),
+    linear-gradient(transparent 0.1875rem, #fff 0, #fff 5.875rem, transparent 0),
     linear-gradient(
       90deg,
-      #f4f4fa 3px,
+      #f4f4fa 0.1875rem,
       transparent 0,
-      transparent 94px,
+      transparent 5.875rem,
       #f4f4fa 0
     );
-  background-size: 24px 24px, 96px 96px, 24px 24px, 96px 96px, 96px 96px,
-    96px 96px;
-  box-shadow: 0 10px 30px 0.1px $shadow-dark;
+  background-size: 1.5rem 1.5rem, 6rem 6rem, 1.5rem 1.5rem, 6rem 6rem, 6rem 6rem,
+    6rem 6rem;
+  box-shadow: 0 0.625rem 1.875rem 0.0063rem $shadow-dark;
 }
 
 .bar {
   width: 100%;
-  min-width: 1px;
-  margin: 2px;
+  min-width: 0.0625rem;
+  margin: 0.125rem;
   background-color: blue;
   border-radius: 5rem;
   transition: all 0.3s ease-in-out;
@@ -45,8 +46,8 @@
   // transform: scale(1.1);
 
   background-color: red !important;
-  // box-shadow: 0px 5px 20px $shadow-darker !important;
-  // transform: scale(1.1) translateX(-10px);
+  // box-shadow: 0rem 0.3125rem 1.25rem $shadow-darker !important;
+  // transform: scale(1.1) translateX(-0.625rem);
 }
 
 .selectedR {
@@ -55,8 +56,8 @@
   // transform: scale(1.1);
 
   background-color: red !important;
-  // box-shadow: 0px 5px 20px $shadow-darker !important;
-  // transform: scale(1.1) translateX(10px);
+  // box-shadow: 0rem 0.3125rem 1.25rem $shadow-darker !important;
+  // transform: scale(1.1) translateX(0.625rem);
 }
 
 .selectedTemp {

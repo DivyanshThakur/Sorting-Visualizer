@@ -1,11 +1,18 @@
 @import "partials/variables";
 
+@media screen and (min-width: 1920px) {
+  html,
+  body {
+    font-size: 22px;
+  }
+}
+
 @mixin transform($scale: 1.1, $duration: 0.5s) {
   transition: transform $duration;
 
   &:hover {
     transform: scale($scale);
-    box-shadow: 0 0 10px $shadow-dark;
+    box-shadow: 0 0 0.625rem $shadow-dark;
   }
 }
 
@@ -22,11 +29,11 @@ body {
 }
 
 .inner-container {
-  min-width: 350px;
+  min-width: 21.875rem;
 }
 
 .padding-all {
-  padding: 20px !important;
+  padding: 1.25rem !important;
 }
 
 .no-effect {

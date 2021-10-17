@@ -68,7 +68,6 @@ playButton.addEventListener("click", () => {
         break;
     }
   } else {
-    $(".btn-sort, .btn-array, input[type='range']").attr("disabled", false);
     isPlaying = false;
     playButton.classList.remove("button--active");
   }
@@ -106,12 +105,6 @@ function addBars() {
   }
 }
 
-// function updateSpeed() {
-// const speed = document.querySelector("#sort_speed").value;
-// const speedText = document.getElementById("speedText");
-// speedText.innerHTML = speed;
-// }
-
 $(".btn-sort").click(function () {
   if (selectedButton === this) {
     $(selectedButton).removeClass("sort-selected");
@@ -140,7 +133,6 @@ function getNum(str) {
 
 async function reset() {
   $(playButton).addClass("btn-disabled");
-  $(".btn-sort, .btn-array, input[type='range']").attr("disabled", true);
 
   const arr = document.getElementById("bars").children;
   // await new Promise((resolve) => setTimeout(() => resolve(), 100));

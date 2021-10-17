@@ -1,10 +1,10 @@
 .navbar {
   width: 100vw;
   height: 8vh;
-  min-height: 50px;
+  min-height: 3.125rem;
 
   .logo {
-    margin: 0 10px;
+    margin: 0 0.625rem;
   }
 
   .heading {
@@ -14,7 +14,7 @@
 
   .github {
     position: relative;
-    right: 15px;
+    right: 0.9375rem;
 
     &:link,
     &:active,
@@ -25,11 +25,11 @@
     .fa-github {
       position: relative;
       z-index: 2;
-      width: 31px;
-      height: 31.2px;
+      width: 1.9375rem;
+      height: 1.95rem;
       background-color: $white;
-      border-radius: 21px;
-      box-shadow: 0 2px 10px $shadow-lighter;
+      border-radius: 1.3125rem;
+      box-shadow: 0 0.125rem 0.625rem $shadow-lighter;
     }
 
     &-title {
@@ -39,28 +39,28 @@
       overflow: hidden;
       z-index: 1;
       transition: all 1s ease-in-out;
-      border: 1px solid black;
-      border-radius: 21px;
-      box-shadow: 0 2px 10px $shadow-lighter;
+      border: 0.0625rem solid black;
+      border-radius: 1.3125rem;
+      box-shadow: 0 0.125rem 0.625rem $shadow-lighter;
       background-color: $white;
       white-space: nowrap;
       color: $white;
-      height: 36.2px;
-      width: 37px;
-      right: -3px;
+      height: 2.2625rem;
+      width: 2.3125rem;
+      right: -0.1875rem;
       bottom: 0;
-      padding-top: 4px;
+      padding-top: 0.25rem;
     }
 
     &:hover {
       color: rgba(0, 0, 0, 0.9);
 
       .github-title {
-        padding: 4px 40px 3px 10px;
+        padding: 0.25rem 2.5rem 0.1875rem 0.625rem;
         position: absolute;
         color: black;
-        width: 175px;
-        height: 36.2px;
+        width: 10.9375rem;
+        height: 2.2625rem;
       }
     }
   }

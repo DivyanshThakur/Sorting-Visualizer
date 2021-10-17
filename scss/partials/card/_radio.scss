@@ -1,6 +1,6 @@
 .radio-style {
   position: relative;
-  border-right: 1px solid $divider-color;
+  border-right: 0.0625rem solid $divider-color;
 }
 
 input[type="radio"] {
@@ -14,8 +14,8 @@ input[type="radio"] {
   }
   
   .check {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     position: absolute;
     border-radius: 50%;
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -23,22 +23,22 @@ input[type="radio"] {
   
   /* Reset */
   input#one ~ .check {
-    transform: translate(-34px, -30px);
+    transform: translate(-2.125rem, -1.875rem);
     background: $secondary-color;
   }
   input#two ~ .check {
-    transform: translate(-35px, -72px);
+    transform: translate(-2.1875rem, -4.5rem);
     background: $primary-color;
-    box-shadow: 0 6px 5px rgba(33, 150, 243, 0.35);
+    box-shadow: 0 0.375rem 0.3125rem rgba(33, 150, 243, 0.35);
   }
   
   /* Radio Input #1 */
   input#one:checked ~ .check {
-    transform: translate(-35px, 12px);
+    transform: translate(-2.1875rem, 0.75rem);
   }
   
   /* Radio Input #2  */
   input#two:checked ~ .check {
-    transform: translate(-35px, -30px);
+    transform: translate(-2.1875rem, -1.875rem);
   }
   
