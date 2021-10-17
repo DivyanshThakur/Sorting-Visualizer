@@ -14,7 +14,10 @@
   border: 0.125rem solid black;
   border-radius: 2rem;
   background-color: #fff;
-  background-image: linear-gradient(rgba(244, 244, 250, 0.8) 0.0625rem, transparent 0),
+  background-image: linear-gradient(
+      rgba(244, 244, 250, 0.8) 0.0625rem,
+      transparent 0
+    ),
     linear-gradient(#f4f4fa 0.0625rem, transparent 0),
     linear-gradient(90deg, rgba(244, 244, 250, 0.8) 0.0625rem, transparent 0),
     linear-gradient(90deg, #f4f4fa 0.0625rem, transparent 0),
@@ -69,7 +72,13 @@
 .completed {
   transition: all 0.2s;
 
-  background-color: green !important;
+  background-color: green;
+}
+
+.greyed {
+  transition: all 0.2s;
+
+  background-color: lightgrey;
 }
 
 .animateDown {

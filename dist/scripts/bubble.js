@@ -4,9 +4,12 @@ async function bubbleSort() {
 
   let i,
     j,
+    swapped = false,
     n = arr.length;
 
   for (i = 0; i < n; i++) {
+    swapped = false;
+
     for (j = 0; j < n - i - 1; j++) {
       if (!isPlaying) {
         return await reset();
@@ -21,6 +24,7 @@ async function bubbleSort() {
       await new Promise((resolve) => setTimeout(() => resolve(), speed));
 
       if (getNum(a.style.height) > getNum(b.style.height)) {
+        swapped = true;
         swap(a, b);
       }
 
@@ -37,6 +41,8 @@ async function bubbleSort() {
       // b.classList.remove("animateDown");
       // await new Promise((resolve) => setTimeout(() => resolve(), speed));
     }
+
+    if (!swapped) break;
 
     arr[n - i - 1].classList.add("completed");
   }

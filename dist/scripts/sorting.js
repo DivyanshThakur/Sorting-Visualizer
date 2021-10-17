@@ -41,27 +41,27 @@ playButton.addEventListener("click", () => {
         break;
 
       case "insertion":
-        selectionSort();
+        insertionSort();
         break;
 
       case "merge":
-        selectionSort();
+        mergeSort();
         break;
 
       case "quick":
-        selectionSort();
+        quickSort();
         break;
 
       case "heap":
-        selectionSort();
+        heapSort();
         break;
 
       case "cycle":
-        selectionSort();
+        cycleSort();
         break;
 
       case "shell":
-        selectionSort();
+        shellSort();
         break;
 
       default:
@@ -131,21 +131,46 @@ function getNum(str) {
   return parseInt(str.match(/\d+/)[0]);
 }
 
-async function reset() {
+async function reset(resetColor = true) {
   $(playButton).addClass("btn-disabled");
 
   const arr = document.getElementById("bars").children;
   // await new Promise((resolve) => setTimeout(() => resolve(), 100));
 
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].classList.remove(
-      "selectedL",
-      "selectedR",
-      "selectedTemp",
-      "completed"
-    );
+  if (resetColor) {
+    for (let i = 0; i < arr.length; i++) {
+      const lst = arr[i].classList;
+      let changed = false;
 
-    await new Promise((resolve) => setTimeout(() => resolve(), 100));
+      if (lst.contains("selectedL")) {
+        changed = true;
+        lst.remove("selectedL");
+      }
+
+      if (lst.contains("selectedR")) {
+        changed = true;
+        lst.remove("selectedR");
+      }
+
+      if (lst.contains("selectedTemp")) {
+        changed = true;
+        lst.remove("selectedTemp");
+      }
+
+      if (lst.contains("completed")) {
+        changed = true;
+        lst.remove("completed");
+      }
+
+      if (lst.contains("greyed")) {
+        changed = true;
+        lst.remove("greyed");
+      }
+
+      if (changed) {
+        await new Promise((resolve) => setTimeout(() => resolve(), 100));
+      }
+    }
   }
 
   playButton.classList.remove("button--active");
