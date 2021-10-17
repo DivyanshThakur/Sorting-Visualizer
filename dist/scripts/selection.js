@@ -26,7 +26,7 @@ async function selectionSort() {
 
       if (getNum(arr[j].style.height) < getNum(arr[min_idx].style.height)) {
         arr[min_idx].classList.remove("selectedR");
-        await new Promise((resolve) => setTimeout(() => resolve(), speed));
+        // await new Promise((resolve) => setTimeout(() => resolve(), speed));
 
         min_idx = j;
         arr[min_idx].classList.add("selectedR");
@@ -34,7 +34,7 @@ async function selectionSort() {
       }
 
       arr[j].classList.remove("selectedTemp");
-      await new Promise((resolve) => setTimeout(() => resolve(), speed));
+      // await new Promise((resolve) => setTimeout(() => resolve(), speed));
     }
 
     const b = arr[min_idx];
