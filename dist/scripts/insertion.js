@@ -11,6 +11,10 @@ async function insertionSort() {
   }
 
   for (i = 1; i < n; i++) {
+    if (!isPlaying) {
+      return await reset();
+    }
+
     j = i - 1;
 
     arr[i].classList.remove("greyed");
