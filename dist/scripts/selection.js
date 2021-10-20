@@ -34,7 +34,7 @@ async function selectionSort() {
       }
 
       arr[j].classList.remove("selectedTemp");
-      await new Promise((resolve) => setTimeout(() => resolve(), speed));
+      // await new Promise((resolve) => setTimeout(() => resolve(), speed));
     }
 
     const b = arr[min_idx];
