@@ -44,25 +44,17 @@ playButton.addEventListener("click", () => {
         insertionSort();
         break;
 
-      case "merge":
+      // case "merge":
       // mergeSort();
       // break;
 
-      case "quick":
+      // case "quick":
       // quickSort();
       // break;
 
       case "heap":
-      // heapSort();
-      // break;
-
-      case "cycle":
-      // cycleSort();
-      // break;
-
-      case "shell":
-      // shellSort();
-      // break;
+        heapSort();
+        break;
 
       default:
         alert("Coming Soon...");
